@@ -7,9 +7,9 @@ logit_R,"Logit-transformed resistance proportion","derived",annual,NA,"May be pr
 Tested.isolates,"Number of tested isolates (denominator)","AMR surveillance aggregation",annual,"country/region","Filtered per inclusion rules"
 isolates,"Number of resistant isolates (numerator)","AMR surveillance aggregation",annual,"country/region","Filtered per inclusion rules"
 TMP,"Annual mean ambient air temperature","CRU TS v4.05 (0.5 deg)",annual mean,"area-weighted national average",
-TMN,"Annual minimum temperature (if used)","CRU TS v4.05 (0.5 deg)",annual "mean/min","area-weighted national average",
+TMN,"Annual minimum temperature (if used)","CRU TS v4.05 (0.5 deg)",annual mean/min,"area-weighted national average",
 PREC,"Annual total precipitation (rain/snow/moisture)","CRU TS v4.05 (0.5 deg)",annual total,"area-weighted national average","mm"
-HUM,"Annual wet-days count (precip >=0.1mm) as humidity proxy","CRU TS v4.05 (0.5 deg)",annual "total/count","area-weighted national average","days/year"
+HUM,"Annual wet-days count (precip >=0.1mm) as humidity proxy","CRU TS v4.05 (0.5 deg)",annual total/count,"area-weighted national average","days/year"
 SR,"Surface runoff","ERA5 (~0.25 deg)",annual total,"area-weighted national average","stored as 100mm units in dataset"
 SSR,"Subsurface runoff","ERA5 (~0.25 deg)",annual total,"area-weighted national average","stored as 100mm units in dataset"
 TCL,"Temperature change on land relative to 1951–1980 baseline","FAOSTAT",annual,NA,"°C"
