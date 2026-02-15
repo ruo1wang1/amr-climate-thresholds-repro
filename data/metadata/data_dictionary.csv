@@ -1,30 +1,33 @@
 variable,definition,unit_or_source,temporal_aggregation,spatial_aggregation,notes
-NAME,"Anonymized country/region identifier","derived/anonymized",NA,NA,"Mapping to country names not shared (anonymized)"
-Region,"WHO/region grouping (as used in analysis)","derived",NA,NA,
-year,"Calendar year",NA,NA,NA,
-R,"Resistance proportion (resistant isolates / tested isolates)","derived",annual,NA,"Outcome used in main models"
-logit_R,"Logit-transformed resistance proportion","derived",annual,NA,"May be present for some combinations"
-Tested.isolates,"Number of tested isolates (denominator)","AMR surveillance aggregation",annual,"country/region","Filtered per inclusion rules"
-isolates,"Number of resistant isolates (numerator)","AMR surveillance aggregation",annual,"country/region","Filtered per inclusion rules"
-TMP,"Annual mean ambient air temperature","CRU TS v4.05 (0.5 deg)",annual mean,"area-weighted national average",
-TMN,"Annual minimum temperature (if used)","CRU TS v4.05 (0.5 deg)",annual mean/min,"area-weighted national average",
-PREC,"Annual total precipitation (rain/snow/moisture)","CRU TS v4.05 (0.5 deg)",annual total,"area-weighted national average","mm"
-HUM,"Annual wet-days count (precip >=0.1mm) as humidity proxy","CRU TS v4.05 (0.5 deg)",annual total/count,"area-weighted national average","days/year"
-SR,"Surface runoff","ERA5 (~0.25 deg)",annual total,"area-weighted national average","stored as 100mm units in dataset"
-SSR,"Subsurface runoff","ERA5 (~0.25 deg)",annual total,"area-weighted national average","stored as 100mm units in dataset"
-TCL,"Temperature change on land relative to 1951–1980 baseline","FAOSTAT",annual,NA,"°C"
-PMP,"Population-weighted PM2.5 exposure","Atmospheric Composition Analysis Group",annual,NA,"μg/m3"
-log_PMP,"Log-transformed PMP","derived",annual,NA,
-UP,"Urban population (% of total population)","World Bank WDI",annual,NA,
-PD,"Population density (people per km^2)","World Bank WDI",annual,NA,
-log_PD,"Log-transformed PD","derived",annual,NA,
-IT,"International tourism arrivals (persons)","World Bank WDI",annual,NA,
-log_IT,"Log-transformed IT","derived",annual,NA,
-HEG,"Current health expenditure (% of GDP)","World Bank WDI",annual,NA,
-OPE,"Out-of-pocket expenditure (% of current health expenditure)","World Bank WDI",annual,NA,
-HD,"Hospital beds (per 1,000 population)","World Bank WDI",annual,NA,
-WASH,"Population using safely managed WASH services (%)","World Bank WDI",annual,NA,
-IC,"Infection control / immunization coverage (as defined in manuscript)","World Bank WDI",annual,NA,
-CPI,"Corruption Perceptions Index","Transparency International",annual,NA,"Index 1–100"
-AMC,"Antimicrobial consumption (DDD per 1,000 persons per day)","IQVIA/GLASS/ESAC-Net/GRAM",annual,NA,"Harmonized across sources"
-log_AMC,"Log-transformed AMC","derived",annual,NA,
+NAME,Anonymized country or region identifier,derived/anonymized,NA,NA,Mapping to real country names is intentionally not shared
+Region,WHO region grouping used in analysis,derived,NA,NA,
+year,Calendar year,NA,NA,NA,
+organism,Bacterial species or strain label,AMR surveillance harmonization,NA,NA,Example Ec Kp Ab Pa
+antibiotics,Antibiotic or drug class label,AMR surveillance harmonization,NA,NA,
+combination,Pathogen drug combination label,derived,NA,NA,Example 3GCR-Ec CR-Kp
+Tested.isolates,Number of tested isolates denominator,AMR surveillance aggregation,annual,country or region,After QC and deduplication
+isolates,Number of resistant isolates numerator,AMR surveillance aggregation,annual,country or region,After QC and deduplication
+R,Resistance proportion resistant isolates divided by tested isolates,derived,annual,country or region,Primary outcome used in main models
+logit_R,Logit transformed resistance proportion log(R/(1-R)),derived,annual,country or region,Used when modeling on logit scale
+TMP,Annual mean ambient air temperature,CRU TS v4.05 0.5deg,annual mean,area weighted national average,Unit C
+TMN,Annual minimum temperature if used,CRU TS v4.05 0.5deg,annual min,area weighted national average,Unit C
+PREC,Annual total precipitation,CRU TS v4.05 0.5deg,annual total,area weighted national average,Unit mm
+HUM,Annual wet days count with precipitation at least 0.1mm as humidity proxy,CRU TS v4.05 0.5deg,annual count,area weighted national average,Unit days per year
+SR,Surface runoff,ERA5 about 0.25deg,annual total,area weighted national average,Stored in 100mm units in dataset
+SSR,Subsurface runoff,ERA5 about 0.25deg,annual total,area weighted national average,Stored in 100mm units in dataset
+TCL,Temperature change on land relative to 1951 to 1980 baseline,FAOSTAT,annual,NA,Unit C
+PMP,Population weighted PM2.5 exposure,Atmospheric Composition Analysis Group,annual,NA,Unit ug per m3
+log_PMP,Log transformed PMP,derived,annual,NA,Log transform applied in analysis
+UP,Urban population percent of total population,World Bank WDI,annual,NA,
+PD,Population density people per km2,World Bank WDI,annual,NA,
+log_PD,Log transformed PD,derived,annual,NA,Log transform applied in analysis
+IT,International tourism arrivals persons,World Bank WDI,annual,NA,
+log_IT,Log transformed IT,derived,annual,NA,Log transform applied in analysis
+HEG,Current health expenditure percent of GDP,World Bank WDI,annual,NA,
+OPE,Out of pocket expenditure percent of current health expenditure,World Bank WDI,annual,NA,
+HD,Hospital beds per 1000 population,World Bank WDI,annual,NA,Inpatient beds in public and private hospitals and rehab centers
+WASH,Population using safely managed WASH services percent,World Bank WDI,annual,NA,Safe drinking water sanitation and hygiene
+IC,Complete child immunisation coverage percent,World Bank WDI,annual,NA,Polio HepB BCG DPT Hib3 measles and second dose of measles
+CPI,Corruption Perceptions Index,Transparency International,annual,NA,Index 1 to 100
+AMC,Antimicrobial consumption DDD per 1000 persons per day,harmonized IQVIA GLASS ESAC-Net GRAM,annual,NA,Harmonized across sources
+log_AMC,Log transformed AMC,derived,annual,NA,Log transform applied in analysis
