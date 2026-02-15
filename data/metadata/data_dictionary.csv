@@ -28,4 +28,3 @@ IC,Child immunisation coverage (composite),World Bank WDI,annual,NA,
 CPI,Corruption Perceptions Index,Transparency International,annual,NA,"Index 1–100"
 AMC,Antimicrobial consumption (DDD/1000/day),IQVIA/GLASS/ESAC-Net/GRAM,annual,NA,Harmonized across sources
 log_AMC,Log-transformed AMC,derived,annual,NA,
-
