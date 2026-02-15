@@ -1,0 +1,8 @@
+variable,definition,unit_or_source,temporal_aggregation,spatial_aggregation,notes
+country,Country/region name,NA,NA,NA,
+year,Calendar year,NA,NA,NA,
+tmp_annual,Annual mean temperature,CRU TS v4.05 (0.5 deg),annual mean,area-weighted national average,
+pre_annual,Annual total precipitation,CRU TS v4.05 (0.5 deg),annual total,area-weighted national average,
+rh_annual,Annual mean relative humidity,CRU TS v4.05 (0.5 deg),annual mean,area-weighted national average,
+runoff_annual,Annual total runoff,ERA5 (~0.25 deg),annual total,area-weighted national average,
+amr_outcome,AMR outcome definition,see manuscript,annual,NA,per pathogen-drug combination
