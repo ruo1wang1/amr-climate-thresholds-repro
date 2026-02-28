@@ -15,3 +15,8 @@ source(file.path("scripts", "02_models_main.R"))
 # source(file.path("scripts", "03_figures_tables.R"))
 
 message("Master pipeline finished.")
+
+# 3) Main figures (Fig3–Fig4)
+source(file.path("scripts","03_fig3A_forestplot.R"))
+source(file.path("scripts","04_fig3B_effects_by_period.R"))
+source(file.path("scripts","05_fig4_covariates_heatmap.R"))
