@@ -47,3 +47,14 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+# Project outputs (generated)
+output/
+Rplots.pdf
+
+# macOS
+.DS_Store
+
+# Python / Jupyter (if any)
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
